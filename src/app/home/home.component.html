@@ -1,0 +1,21 @@
+<app-header></app-header>
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!groceries || groceries.length<=0"
+    resetLinkText="Reset Search"></app-not-found>
+    <div class="demo">
+<ul>
+    <li *ngFor="let grocery of groceries">
+        <a routerLink="/grocery/{{grocery.id}}">
+            <img src="{{grocery.imageUrl}}" alt="grocery images">
+            <div class="content">
+                <div class="name">
+                   {{grocery.name}}
+                </div>
+                <span class="favorite {{grocery.favorite?'':'not'}}">Add to Favorites</span>
+            </div>
+        </a>
+    </li>
+</ul>
+</div>
+

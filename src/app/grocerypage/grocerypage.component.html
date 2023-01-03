@@ -1,0 +1,19 @@
+<app-header></app-header>
+<app-not-found [visible]="!grocery" notFoundMessage="Product Not Found" resetLinkText="Go To Homepage"></app-not-found>
+<div *ngIf="grocery" class="container">
+    <img [src]="grocery.imageUrl" [alt]="grocery.name" />
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{grocery.name}}
+            </span>
+            <span class="favorite {{grocery.favorite?'':'not'}}">Add Favorite</span>
+        </div>
+            <div class="price">
+                <span>
+                    {{grocery.price| currency}}
+                </span>
+            </div>
+            <button (click)="addToCart()">Add to Cart</button>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<h1 class="text-center">Log In</h1>
+<div class="container">
+<div class="card-body">
+   <form action="action_page.php" method="post">
+
+
+    <div class="text-center" >
+      <img src="../assets/logo.png" alt="logo" width="100px" height="100px">
+    </div>
+  
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+     <input type="text" placeholder="Enter Username" name="uname">
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password">
+      <div>
+      <button  class="btn btn-success" (click)="login()"> Login</button>
+    </div>
+    
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container signup">
+      <p>Don't have an account<a href="register">Sign Up</a>.</p>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <span class="password"> <a href="#">Forgot password?</a></span>
+    </div>
+  </form>
+
+  </div>
+</div>
+  
